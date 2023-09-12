@@ -1,0 +1,5 @@
+<div class="flex flex-row items-center justify-between p-3 bg-slate-950 text-white">
+  <span>Transform <span class="font-bold">JSON</span> to <span class="font-bold">TypeScript</span></span>
+  <button [disabled]="!validInput || (appService.loading|async)" (click)="transform.emit()"
+    class="bg-emerald-500 disabled:bg-red-400 hover:bg-emerald-400 hover:text-white text-sm text-gray-100 px-2 py-1 rounded-lg">Transform</button>
+</div>

@@ -1,0 +1,9 @@
+<app-header [validInput]="appService.valid|async" (transform)="appService.triggerTransform()"></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+<div *ngIf="appService.loading|async" class='w-full fixed top-0'>
+    <div class='h-0.5 w-full bg-transparent overflow-hidden'>
+        <div class='progress w-full h-full bg-emerald-500 left-right'></div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+@import "../../variables";
+
+:host {
+  ::ng-deep ngx-monaco-editor .editor-container {
+    height: calc(
+      100vh - $headerHeight - $innerToolbarHeight - $footerHeight
+    ) !important;
+  }
+}

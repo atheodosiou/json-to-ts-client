@@ -1,0 +1,14 @@
+// Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables";
+
+.heightFull {
+  height: calc(100vh - $headerHeight - $footerHeight);
+}
+
+.bg-vs-code-gray {
+  background-color: $vsCodeGrey;
+}
