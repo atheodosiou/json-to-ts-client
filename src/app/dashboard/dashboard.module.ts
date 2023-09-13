@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { DashboardComponent } from './dashboard.component';
-
+import { ClipboardModule } from '@angular/cdk/clipboard';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +16,7 @@ import { DashboardComponent } from './dashboard.component';
     ]),
     ReactiveFormsModule,
     MonacoEditorModule,
+    ClipboardModule,
   ],
   declarations: [DashboardComponent],
 })

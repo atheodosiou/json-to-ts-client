@@ -7,3 +7,8 @@
         <div class='progress w-full h-full bg-emerald-500 left-right'></div>
     </div>
 </div>
+
+<div *ngIf="appService.copy|async"
+    class="fixed bottom-14 right-1/2 bg-emerald-500 text-white rounded-lg px-3 py-2 z-10 shadow-lg border border-gray-100 w-52">
+    Data copied to clipboard!
+</div>

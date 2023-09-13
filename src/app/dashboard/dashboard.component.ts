@@ -19,8 +19,9 @@ export class DashboardComponent {
   inputForm: FormGroup;
   outputForm: FormGroup;
 
+  readonly appService = inject(AppService);
+
   private readonly apiService = inject(ApiService);
-  private readonly appService = inject(AppService);
   private readonly fb = inject(FormBuilder);
 
   @ViewChild(EditorComponent, { static: false })
@@ -49,9 +50,7 @@ export class DashboardComponent {
         tap(() => this.appService.setValid(this.inputForm.valid)),
         takeUntilDestroyed()
       )
-      .subscribe((res) => {
-        console.log(res);
-      });
+      .subscribe();
 
     this.inputForm.patchValue({
       code: this.exampleJson,
@@ -74,5 +73,9 @@ export class DashboardComponent {
 
   clear() {
     this.inputForm.reset({ code: '' });
+  }
+
+  copy() {
+    console.log(this.outputForm.get('code')?.value);
   }
 }

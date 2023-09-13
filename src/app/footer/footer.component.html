@@ -1,9 +1,11 @@
 <div class="flex flex-row items-center justify-between p-3 text-white bg-slate-950">
+
     <span class="text-sm text-slate-500">
-        Release Date: {{releaseDate|date:'dd-MM-yyyy'}}
+        Release Date: {{metaData.releaseDate|date:'dd-MM-yyyy'}}
     </span>
-    <span class="text-sm text-slate-500">Converions: {{totalConversions|async}}</span>
+    <span class="text-sm text-slate-500">Converions so far: {{totalConversions|async}}</span>
+
     <span class="text-sm text-slate-500">Created with <i class="fa-solid fa-heart text-red-500"></i> by <a
-            href="https://anastasios.theodosiou.me" target="_blank" class="font-semibold hover:text-white">Anastasios
+            [href]="metaData.websiteUrl" target="_blank" class="font-semibold hover:text-emerald-500">Anastasios
             Theodosiou</a></span>
 </div>

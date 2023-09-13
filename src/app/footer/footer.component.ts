@@ -9,7 +9,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 })
 export class FooterComponent {
   apiService = inject(ApiService);
-  releaseDate = environment.releaseDate;
+  metaData = environment;
   totalConversions = this.apiService
     .getTotalConversions()
     .pipe(takeUntilDestroyed());
